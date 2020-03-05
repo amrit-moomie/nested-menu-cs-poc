@@ -1,3 +1,11 @@
-<p>
-nested-city-hierrachy-list works!
-</p>
+
+    <div *ngIf="sortedData.length > 0">
+        <button mat-button [matMenuTriggerFor]="mainMenu.childMenu">Edit</button>
+        <!-- <mat-menu #Group="matMenu">
+            <button *ngFor="let item of sortedData" mat-menu-item>{{item.label}}</button> -->
+            <!-- <ng-template ngIf="item.childRows.length > 0">
+                <button *ngFor="let child of item.childRows" mat-menu-item>{{child.label}}</button>
+            </ng-template> 
+        </mat-menu> -->
+        <cs-menu-item #mainMenu [rows]="sortedData"></cs-menu-item>
+    </div>

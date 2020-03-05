@@ -11,7 +11,9 @@ import {DemoMaterialModule} from './app/material-module';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 
 import {NestedMenuExample} from './app/nested-menu-example';
-import { NestedCityHierrachyListComponent } from './app/nested-city-hierrachy-list/nested-city-hierrachy-list';
+import { NestedCityHierrachyListComponent } from './app/nested-city-hierrachy-list/nested-city-hierrachy-list.component';
+import { MenuItemComponent } from './app/cs-menu-item/cs-menu-item';
+// import { NestedCityHierrachyListComponent } from './app/nested-city-hierrachy-list/nested-city-hierrachy-list';
 // Default MatFormField appearance to 'fill' as that is the new recommended approach and the
 // `legacy` and `standard` appearances are scheduled for deprecation in version 10.
 // This makes the examples that use MatFormField render the same in StackBlitz as on the docs site.
@@ -25,8 +27,8 @@ import { NestedCityHierrachyListComponent } from './app/nested-city-hierrachy-li
     MatNativeDateModule,
     ReactiveFormsModule,
   ],
-  entryComponents: [NestedMenuExample],
-  declarations: [NestedMenuExample, NestedCityHierrachyListComponent],
+  entryComponents: [NestedMenuExample, NestedCityHierrachyListComponent, MenuItemComponent],
+  declarations: [NestedMenuExample, NestedCityHierrachyListComponent, MenuItemComponent],
   bootstrap: [NestedCityHierrachyListComponent],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },

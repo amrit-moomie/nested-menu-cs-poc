@@ -1,5 +1,16 @@
-<button mat-button [matMenuTriggerFor]="animals">Animal index</button>
+<button mat-button [matMenuTriggerFor]="Group21">Brazil-Country</button>
 
+
+<mat-menu #Group212="matMenu">
+  <button mat-menu-item>Salvador-City</button>
+</mat-menu>
+
+<mat-menu #Group21="matMenu">
+  <button mat-menu-item>Brasilia-City</button>
+  <button mat-menu-item [matMenuTriggerFor]="Group212">Bahia-City</button>
+</mat-menu>
+
+<!-- 
 <mat-menu #animals="matMenu">
   <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
   <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
@@ -47,7 +58,7 @@
   <button mat-menu-item disabled>Velociraptor</button>
   <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
 
-</mat-menu>
+</mat-menu> -->
 
 
 <!-- Copyright 2019 Google LLC. All Rights Reserved.
